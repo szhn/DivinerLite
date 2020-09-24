@@ -95,7 +95,6 @@ public class Test {
                 System.out.println("Неправильно введён пол(М=1 или Ж=2)");
             }
             System.out.println(stuff4 + " = " + b);
-//        System.out.println(stuff6 + " = "+ curyear);
             System.out.println(stuff5 + " = " + year);
             System.out.println("//////Diviner//////");
             System.out.println("Thanks for watching");
