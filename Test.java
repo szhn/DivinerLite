@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) throws URISyntaxException, IOException {
-                System.out.println("/////       /////");
+        System.out.println("/////       /////");
         System.out.println("     Diviner    ");
         System.out.println("                ");
         System.out.println("     by szhn    ");
@@ -30,11 +30,13 @@ public class Test {
         String stuff12 = "Версия JAVA";
         String stuff13 = "PC";
         String stuff14 = "Mem Usage";
+        String stuff15 = "Compile Type";
         int date = Calendar.getInstance().get(Calendar.DATE), month = Calendar.getInstance().get(Calendar.MONTH);
         int hour = Calendar.getInstance().get(Calendar.HOUR), minute = Calendar.getInstance().get(Calendar.MINUTE), second = Calendar.getInstance().get(Calendar.SECOND);
         OperatingSystemMXBean bean = ManagementFactory.getOperatingSystemMXBean();
         RuntimeMXBean bean1 = ManagementFactory.getRuntimeMXBean();
         MemoryMXBean mem = ManagementFactory.getMemoryMXBean();
+        CompilationMXBean comp = ManagementFactory.getCompilationMXBean();
         if (debug == 1) {
             System.out.println("//////Debug//////");
             System.out.println(stuff7 + " = " + date + ":" + month + ":" + curyear);
@@ -45,6 +47,7 @@ public class Test {
             System.out.println(stuff12 + " = " + bean1.getVmName() + " // // " + bean1.getVmVersion());
             System.out.println(stuff13 + " = " + bean1.getName());
             System.out.println(stuff14 + " = " + mem.getHeapMemoryUsage());
+            System.out.println(stuff15 + " = " + comp.getName());
             System.out.println("//////Debug//////");
         } else if (debug == 2) {
             System.out.println("///Debug mode disabled///");
