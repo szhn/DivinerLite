@@ -1,6 +1,6 @@
 # DivinerLite
 
-Just a rofl from my study java
+Just a test from my study in java
 
 
 Why? -I dont know
