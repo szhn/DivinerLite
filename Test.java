@@ -1,9 +1,9 @@
-
-
+import javax.management.MXBean;
 import java.awt.*;
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
 import java.lang.management.OperatingSystemMXBean;
+import java.lang.management.RuntimeMXBean;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Calendar;
@@ -12,32 +12,12 @@ import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) throws URISyntaxException, IOException {
-        //N2
-//        System.out.println("Hello World");
-//        int age = 15, curyear = Calendar.getInstance().get(Calendar.YEAR), year;
-//        year = curyear - age;
-//        System.out.println(year);
-        //N2
-//        int age = 15;
-//        int height = 60;
-//        int a = height + 1;
-//        int b = age + 1;
-//        String stuff1 = "Твой возвраст";
-//        String stuff2 = "Твой вес";
-//        String stuff3 = "Твой вес через год";
-//        String stuff4 = "Твой возвраст через год";
-//        System.out.println(stuff1 + " = "+ age);
-//        System.out.println(stuff2 + " = "+ height);
-//        System.out.println(stuff1 + " = "+ age);
-//        System.out.println(stuff2 + " = "+ height);
-//        System.out.println(stuff3 + " = "+ a);
-//        System.out.println(stuff4 + " = "+ b);
-        //N3
         System.out.println("/////       /////");
         System.out.println("     Diviner    ");
         System.out.println("                ");
         System.out.println("     by szhn    ");
         System.out.println("/////       /////");
+        System.out.println();
         System.out.println("Debug?(yes=1 no=2)");
         Scanner scan4 = new Scanner(System.in);
         int debug = scan4.nextInt();
@@ -47,9 +27,12 @@ public class Test {
         String stuff9 = "Архитектура";
         String stuff10 = "ОС";
         String stuff11 = "Кол-во ядер";
+        String stuff12 = "Версия JAVA";
+        String stuff13 = "PC";
         int date = Calendar.getInstance().get(Calendar.DATE), month = Calendar.getInstance().get(Calendar.MONTH);
         int hour = Calendar.getInstance().get(Calendar.HOUR), minute = Calendar.getInstance().get(Calendar.MINUTE), second = Calendar.getInstance().get(Calendar.SECOND);
         OperatingSystemMXBean bean = ManagementFactory.getOperatingSystemMXBean();
+        RuntimeMXBean bean1 = ManagementFactory.getRuntimeMXBean();
         if (debug == 1) {
             System.out.println("//////Debug//////");
             System.out.println(stuff7 + " = " + date + ":" + month + ":" + curyear);
@@ -57,10 +40,13 @@ public class Test {
             System.out.println(stuff9 + " = " + bean.getArch());
             System.out.println(stuff10 + " = " + bean.getName());
             System.out.println(stuff11 + " = " + bean.getAvailableProcessors());
+            System.out.println(stuff12 + " = " + bean1.getVmName() + "// //" + bean1.getVmVersion());
+            System.out.println(stuff13 + " = " + bean1.getName());
             System.out.println("//////Debug//////");
         } else if (debug == 2) {
             System.out.println("///Debug mode disabled///");
         }
+        System.out.println();
         System.out.println("Start?(yes=1 no=2)");
         Scanner scan5 = new Scanner(System.in);
         int start = scan5.nextInt();
