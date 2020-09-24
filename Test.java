@@ -40,7 +40,7 @@ public class Test {
             System.out.println(stuff9 + " = " + bean.getArch());
             System.out.println(stuff10 + " = " + bean.getName());
             System.out.println(stuff11 + " = " + bean.getAvailableProcessors());
-            System.out.println(stuff12 + " = " + bean1.getVmName() + "// //" + bean1.getVmVersion());
+            System.out.println(stuff12 + " = " + bean1.getVmName() + " // // " + bean1.getVmVersion());
             System.out.println(stuff13 + " = " + bean1.getName());
             System.out.println("//////Debug//////");
         } else if (debug == 2) {
